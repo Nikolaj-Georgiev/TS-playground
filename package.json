@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "typescript": "^5.4.5"
+  },
+  "name": "tsplay",
+  "version": "1.0.0",
+  "description": "tsplayground",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "author": "ts",
+  "license": "ISC"
+}
