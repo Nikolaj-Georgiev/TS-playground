@@ -9,8 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "watch": "tsc --watch"
+    "build": "npx tsc greeter.ts",
+    "watch": "npx tsc greeter.ts --watch"
   },
   "author": "ts",
   "license": "ISC"

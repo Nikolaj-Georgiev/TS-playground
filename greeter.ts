@@ -3,4 +3,4 @@ function greeter(person: string) {
 }
 
 let user = [0, 1, 2];
-document.body.textContent = greeter(user);
+document.body.textContent = greeter();
