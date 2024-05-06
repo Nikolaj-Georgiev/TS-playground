@@ -10,3 +10,9 @@ function printCoord(pt) {
     console.log("The coordinate's y value is " + pt.y);
 }
 printCoord({ x: 3, y: 7 });
+function printName(obj) {
+    var name = obj.first.concat(" ".concat(obj.last !== undefined ? obj.last : ''));
+    console.log(name);
+}
+printName({ first: 'Bob' });
+printName({ first: 'Alice', last: 'Alisson' });
