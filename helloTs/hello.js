@@ -38,6 +38,7 @@ function printId1(id) {
         console.log(id);
     }
 }
+// Array in union
 function welcomePeople(x) {
     if (Array.isArray(x)) {
         console.log('Hello ' + x.join(' and '));
@@ -50,3 +51,15 @@ function welcomePeople(x) {
 }
 welcomePeople(['Pesho', 'Gosho', 'Atanas', 'Bai Hui']);
 welcomePeople('Suzana');
+// Return type is inferred as number[] | string
+function getFirstThree(x) {
+    return x.slice(0, 3);
+}
+console.log(getFirstThree([3, 2, 1, 2, 3]));
+console.log(getFirstThree('[3,2,1]'));
+function printCoords(pt) {
+    console.log("The coordinate's x value is " + pt.x);
+    console.log("The coordinate's y value is " + pt.y);
+}
+printCoords({ x: 100, y: 100 });
+

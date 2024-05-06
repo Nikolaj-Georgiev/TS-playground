@@ -49,6 +49,7 @@ function printId1(id: number | string) {
   }
 }
 
+// Array in union
 function welcomePeople(x: string[] | string) {
   if (Array.isArray(x)) {
     console.log('Hello ' + x.join(' and '));
@@ -61,3 +62,30 @@ function welcomePeople(x: string[] | string) {
 
 welcomePeople(['Pesho', 'Gosho', 'Atanas', 'Bai Hui']);
 welcomePeople('Suzana');
+
+// Return type is inferred as number[] | string
+function getFirstThree(x: number[] | string) {
+  return x.slice(0, 3);
+}
+
+console.log(getFirstThree([3, 2, 1, 2, 3]));
+console.log(getFirstThree('[3,2,1]'));
+
+///////////////////////////////
+// Type Aliases
+
+type Point = {
+  x: number;
+  y: number;
+};
+
+function printCoords(pt: Point) {
+  console.log("The coordinate's x value is " + pt.x);
+  console.log("The coordinate's y value is " + pt.y);
+}
+
+printCoords({ x: 100, y: 100 });
+
+// You can actually use a type alias to give a name to any type at all, not just an object type. For example, a type alias can name a union type:
+
+type ID = number | string;
