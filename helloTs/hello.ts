@@ -111,3 +111,16 @@ printCoord1({ x: 100, y: 100 });
 
 const myCanvas = document.getElementById('main_canvas') as HTMLCanvasElement;
 const myCanvas1 = <HTMLCanvasElement>document.getElementById('main_canvas'); //not working with tsx?
+
+declare const expr: any;
+type T = { a: 1; b: 2; c: 3 };
+// ---cut---
+const a = expr as any as T;
+
+/////////////////
+// Literal Types
+function printText(s: string, alignment: 'left' | 'right' | 'center') {
+  // ...
+} // very useful for func args!!!
+printText('Hello, world', 'left');
+printText("G'day, mate", 'centre'); //hello.ts:126:26 - error TS2345: Argument of type '"centre"' is not assignable to parameter of type '"center" | "left" | "right"'.

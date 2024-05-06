@@ -70,4 +70,13 @@ printCoord1({ x: 100, y: 100 });
 ///////////////////
 // Type Assertions
 var myCanvas = document.getElementById('main_canvas');
-var myCanvas1 = document.getElementById('main_canvas');
+var myCanvas1 = document.getElementById('main_canvas'); //not working with tsx?
+// ---cut---
+var a = expr;
+/////////////////
+// Literal Types
+function printText(s, alignment) {
+    // ...
+} // very useful for func args!!!
+printText('Hello, world', 'left');
+printText("G'day, mate", 'centre'); //hello.ts:126:26 - error TS2345: Argument of type '"centre"' is not assignable to parameter of type '"center" | "left" | "right"'.
