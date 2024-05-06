@@ -13,6 +13,11 @@ printCoord({ x: 3, y: 7 });
 function printName(obj) {
     var name = obj.first.concat(obj.last !== undefined ? ' ' + obj.last : '');
     console.log(name);
+    // this is not working as intended!!
+    // console.log(obj.last?.toUpperCase());
+    if (obj.last !== undefined) {
+        console.log(obj.last.toUpperCase());
+    }
 }
 printName({ first: 'Bob' });
 printName({ first: 'Alice', last: 'Alisson' });
