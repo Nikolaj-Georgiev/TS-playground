@@ -11,7 +11,7 @@ function printCoord(pt) {
 }
 printCoord({ x: 3, y: 7 });
 function printName(obj) {
-    var name = obj.first.concat(" ".concat(obj.last !== undefined ? obj.last : ''));
+    var name = obj.first.concat(obj.last !== undefined ? ' ' + obj.last : '');
     console.log(name);
 }
 printName({ first: 'Bob' });
