@@ -21,3 +21,10 @@ function printName(obj) {
 }
 printName({ first: 'Bob' });
 printName({ first: 'Alice', last: 'Alisson' });
+///////////////////
+// Union Types
+function printId(id) {
+    console.log('Your ID is: ' + id);
+}
+printId('Pesho');
+printId('42');

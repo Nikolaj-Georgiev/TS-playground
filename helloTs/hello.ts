@@ -28,3 +28,13 @@ function printName(obj: { first: string; last?: string }) {
 
 printName({ first: 'Bob' });
 printName({ first: 'Alice', last: 'Alisson' });
+
+///////////////////
+// Union Types
+function printId(id: number | string) {
+  console.log('Your ID is: ' + id);
+}
+
+printId('Pesho');
+printId('42');
+// printId({ pesho: 42 }); //hello.ts:39:9 - error TS2345: Argument of type '{ pesho: number; }' is not assignable to parameter of type 'string | number'.
