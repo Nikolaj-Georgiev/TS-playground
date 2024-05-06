@@ -67,3 +67,7 @@ function printCoord1(pt) {
     console.log("The coordinate's y value is " + pt.y);
 }
 printCoord1({ x: 100, y: 100 });
+///////////////////
+// Type Assertions
+var myCanvas = document.getElementById('main_canvas');
+var myCanvas1 = document.getElementById('main_canvas');

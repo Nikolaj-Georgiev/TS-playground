@@ -92,6 +92,7 @@ type ID = number | string;
 
 //////////////////////////////
 // Interfaces
+// An interface declaration is another way to name an object type:
 
 interface Point1 {
   x: number;
@@ -104,3 +105,9 @@ function printCoord1(pt: Point1) {
 }
 
 printCoord1({ x: 100, y: 100 });
+
+///////////////////
+// Type Assertions
+
+const myCanvas = document.getElementById('main_canvas') as HTMLCanvasElement;
+const myCanvas1 = <HTMLCanvasElement>document.getElementById('main_canvas'); //not working with tsx?
