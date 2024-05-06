@@ -69,10 +69,12 @@ function printCoord1(pt) {
 printCoord1({ x: 100, y: 100 });
 ///////////////////
 // Type Assertions
-var myCanvas = document.getElementById('main_canvas');
-var myCanvas1 = document.getElementById('main_canvas'); //not working with tsx?
-// ---cut---
-var a = expr;
+//const myCanvas = document.getElementById('main_canvas') as HTMLCanvasElement;
+//const myCanvas1 = <HTMLCanvasElement>document.getElementById('main_canvas'); //not working with tsx?
+// declare const expr: any;
+// type T = { a: 1; b: 2; c: 3 };
+// // ---cut---
+// const a = expr as any as T;
 /////////////////
 // Literal Types
 function printText(s, alignment) {
@@ -80,3 +82,14 @@ function printText(s, alignment) {
 } // very useful for func args!!!
 printText('Hello, world', 'left');
 printText("G'day, mate", 'centre'); //hello.ts:126:26 - error TS2345: Argument of type '"centre"' is not assignable to parameter of type '"center" | "left" | "right"'.
+// Numeric literal types work the same way:
+function compare(a, b) {
+    return a === b ? 0 : a > b ? 1 : -1;
+}
+console.log(compare('Goshoo', 'Pesho'));
+function configure(x) {
+    //
+}
+configure({ width: 100 });
+configure('auto');
+configure('automatic'); //Argument of type '"automatic"' is not assignable to parameter of type 'Options | "auto"'.
