@@ -50,4 +50,10 @@ hobbies = ['Cooking', 'Sports', 'Reading'];
 function add(a: number, b: number): void {
   const result = a + b;
   console.log(result);
+  // return result;// first-app.ts:53:3 - error TS2322: Type 'number' is not assignable to type 'void'.
 }
+
+function add1(a: number, b: number): number {
+  const result = a + b;
+  return result;
+} // N.B. if we return something we want to set our return type to that!!! We can omit this and TS will infer the return type in this case.

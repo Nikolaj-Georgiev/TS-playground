@@ -26,3 +26,10 @@ var hobbies; // number[], boolean[]
 //{name:string; age:number}[]
 hobbies = ['Cooking', 'Sports', 'Reading'];
 // hobbies = [1, 2, 3];
+// functions
+// function add(a: number, b: number): undefined {// technically we can use it but we should use void
+function add(a, b) {
+    var result = a + b;
+    // console.log(result);
+    return result;
+}
