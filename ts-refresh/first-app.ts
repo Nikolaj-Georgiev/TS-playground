@@ -11,6 +11,7 @@ let isValid = true;
 
 // string, number, boolean
 
+// union type
 let  userId: number | string = 'abc1';
 userId = 123;
 
