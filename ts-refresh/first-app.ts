@@ -43,3 +43,11 @@ let hobbies: string[]; // number[], boolean[]
 
 hobbies = ['Cooking', 'Sports', 'Reading'];
 // hobbies = [1, 2, 3];
+
+// functions
+
+// function add(a: number, b: number): undefined {// technically we can use it but we should use void
+function add(a: number, b: number): void {
+  const result = a + b;
+  console.log(result);
+}
