@@ -1,0 +1,11 @@
+// let userName = 'Niko';
+var userName = 'Niko'; // no need to explicitly describe the type in this case it will be inferred by TS. You can use the declaration from the upper sentence
+// userName = 34;
+userName = 'Niko';
+// let userAge:number = 34;
+var userAge = 34;
+// let isValid:boolean = true;
+var isValid = true;
+// string, number, boolean
+var userId = 'abc1';
+userId = 123;
