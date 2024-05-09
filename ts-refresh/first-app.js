@@ -20,3 +20,9 @@ user = {
     id: 'abc', //123
 };
 // user = {};
+// Array types
+// let hobbies: Array<string>; valid but long
+var hobbies; // number[], boolean[]
+//{name:string; age:number}[]
+hobbies = ['Cooking', 'Sports', 'Reading'];
+// hobbies = [1, 2, 3];

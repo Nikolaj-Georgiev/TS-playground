@@ -33,3 +33,13 @@ user = {
 };
 
 // user = {};
+
+// Array types
+
+// let hobbies: Array<string>; valid but long
+let hobbies: string[]; // number[], boolean[]
+
+//{name:string; age:number}[]
+
+hobbies = ['Cooking', 'Sports', 'Reading'];
+// hobbies = [1, 2, 3];
