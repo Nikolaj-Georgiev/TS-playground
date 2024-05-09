@@ -7,5 +7,16 @@ var userAge = 34;
 // let isValid:boolean = true;
 var isValid = true;
 // string, number, boolean
+// union type
 var userId = 'abc1';
 userId = 123;
+// Object types
+// let user: object;
+var user;
+user = {
+    name: 'Niko',
+    age: 43,
+    isAdmin: true,
+    id: 'abc', //123
+};
+// user = {};
