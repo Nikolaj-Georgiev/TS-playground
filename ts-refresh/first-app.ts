@@ -57,3 +57,11 @@ function add1(a: number, b: number): number {
   const result = a + b;
   return result;
 } // N.B. if we return something we want to set our return type to that!!! We can omit this and TS will infer the return type in this case.
+
+function calculate(
+  a: number,
+  b: number,
+  calcFn: (a: number, b: number) => number
+) {
+  calcFn(a, b);
+}
