@@ -37,6 +37,11 @@ function add1(a, b) {
     var result = a + b;
     return result;
 } // N.B. if we return something we want to set our return type to that!!! We can omit this and TS will infer the return type in this case.
+function calculate1(a, b, calcFn) {
+    calcFn(a, b);
+}
+calculate1(2, 5, add1);
 function calculate(a, b, calcFn) {
     calcFn(a, b);
 }
+calculate(2, 5, add1);

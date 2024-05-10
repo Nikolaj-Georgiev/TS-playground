@@ -58,10 +58,22 @@ function add1(a: number, b: number): number {
   return result;
 } // N.B. if we return something we want to set our return type to that!!! We can omit this and TS will infer the return type in this case.
 
-function calculate(
+function calculate1(
   a: number,
   b: number,
   calcFn: (a: number, b: number) => number
 ) {
   calcFn(a, b);
 }
+
+calculate1(2, 5, add1);
+
+//Type aliases
+
+type AddFn = (a: number, b: number) => number;
+
+function calculate(a: number, b: number, calcFn: AddFn) {
+  calcFn(a, b);
+}
+
+calculate(2, 5, add1);
