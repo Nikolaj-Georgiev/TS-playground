@@ -62,4 +62,5 @@ var admin;
 admin = {
     permissions: ['d', 'd', 'login'],
     userName: 'Niko',
+    pictureUrl: '../public/imgOfHujnja.png',
 };

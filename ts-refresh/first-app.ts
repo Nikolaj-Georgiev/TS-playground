@@ -124,6 +124,9 @@ function login(credentials: Credentials) {}
 login(creds);
 login(new AuthCredentials());
 
+/////////////////////////
+// merging Types
+/*
 type Admin = {
   permissions: string[];
 };
@@ -139,4 +142,28 @@ let admin: AppAdmin;
 admin = {
   permissions: ['d', 'd', 'login'],
   userName: 'Niko',
+};
+*/
+
+////////////////////
+// merging/extending interfaces
+
+interface Admin {
+  permissions: string[];
+}
+
+interface AppUser {
+  userName: string;
+}
+
+interface AppAdmin extends Admin, AppUser {
+  pictureUrl: string;
+} // we can add additional props in the merged interface
+
+let admin: AppAdmin;
+
+admin = {
+  permissions: ['d', 'd', 'login'],
+  userName: 'Niko',
+  pictureUrl: '../public/imgOfHujnja.png',
 };
