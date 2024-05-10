@@ -12,18 +12,34 @@ let isValid = true;
 // string, number, boolean
 
 // union type
-let userId: number | string = 'abc1';
+// let userId: number | string = 'abc1';
+
+//type alias for the union types
+type StringOrNum = number | string;
+
+let userId: StringOrNum = 'abc1';
 userId = 123;
 
 // Object types
 // let user: object;
-
+/*
 let user: {
   name: string;
   age: number;
   isAdmin: boolean;
   id: string | number;
 };
+*/
+
+//type alias for the object types
+type User = {
+  name: string;
+  age: number;
+  isAdmin: boolean;
+  id: string | number;
+};
+
+let user: User;
 
 user = {
   name: 'Niko',
