@@ -201,5 +201,26 @@ type DataStorage<T> = {
 
 const textStorage: DataStorage<string> = {
   storage: [],
+  add(data) {
+    this.storage.push(data);
+  },
+};
+
+const userStorage: DataStorage<User> = {
+  storage: [],
   add(data) {},
 };
+
+//generic function
+
+function merge<T, U>(a: T, b: U) {
+  return {
+    ...a,
+    ...b,
+  };
+}
+
+// const newUser = merge<{ name: string }, { age: number }>(// TS is able to infer the types without me explicitly write them!!!
+const newUser = merge({ name: 'Niko' }, { age: 43 });
+
+newUser.name;
