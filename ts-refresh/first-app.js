@@ -64,10 +64,14 @@ admin = {
     userName: 'Niko',
     pictureUrl: '../public/imgOfHujnja.png',
 };
-/////////////////////////////
-// literal types
 var role; //admin, user, editor
 role = 'admin';
 role = 'user';
 role = 'editor';
-// role = 'abc'; this will bring an error
+// role = 'abc'; //this will bring an error
+// type guards
+function performAction(action, role) {
+    if (role === 'admin' && typeof action === 'string') {
+        //...
+    }
+}
