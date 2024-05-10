@@ -64,3 +64,10 @@ admin = {
     userName: 'Niko',
     pictureUrl: '../public/imgOfHujnja.png',
 };
+/////////////////////////////
+// literal types
+var role; //admin, user, editor
+role = 'admin';
+role = 'user';
+role = 'editor';
+// role = 'abc'; this will bring an error
