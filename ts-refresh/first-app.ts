@@ -180,9 +180,26 @@ role = 'user';
 role = 'editor';
 // role = 'abc'; //this will bring an error
 
+//////////////////////////
 // type guards
 function performAction(action: string | number, role: Role) {
   if (role === 'admin' && typeof action === 'string') {
     //...
   }
 }
+
+////////////////////////////
+// Generic types
+let roles: Array<Role>;
+roles = ['admin', 'editor'];
+
+//custom generic type
+type DataStorage<T> = {
+  storage: T[];
+  add: (data: T) => void;
+};
+
+const textStorage: DataStorage<string> = {
+  storage: [],
+  add(data) {},
+};
