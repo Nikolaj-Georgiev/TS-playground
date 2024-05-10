@@ -41,8 +41,25 @@ function calculate(a, b, calcFn) {
     calcFn(a, b);
 }
 calculate(2, 5, add1);
+// interfaces are easily extendable -> this feature is called declaration merging
+// interface Credentials {
+//   mode: string;
+// }
 var creds;
 creds = {
     password: 'abs',
     email: 'test@test.tt',
+};
+var AuthCredentials = /** @class */ (function () {
+    function AuthCredentials() {
+    }
+    return AuthCredentials;
+}());
+function login(credentials) { }
+login(creds);
+login(new AuthCredentials());
+var admin;
+admin = {
+    permissions: ['d', 'd', 'login'],
+    userName: 'Niko',
 };

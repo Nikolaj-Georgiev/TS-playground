@@ -101,10 +101,42 @@ interface Credentials {
   password: string;
   email: string;
 }
+// interfaces are easily extendable -> this feature is called declaration merging
+// interface Credentials {
+//   mode: string;
+// }
 
 let creds: Credentials;
 
 creds = {
   password: 'abs',
   email: 'test@test.tt',
+};
+
+class AuthCredentials implements Credentials {
+  password: string;
+  email: string;
+  userName: string;
+}
+
+function login(credentials: Credentials) {}
+
+login(creds);
+login(new AuthCredentials());
+
+type Admin = {
+  permissions: string[];
+};
+
+type AppUser = {
+  userName: string;
+};
+
+type AppAdmin = Admin & AppUser;
+
+let admin: AppAdmin;
+
+admin = {
+  permissions: ['d', 'd', 'login'],
+  userName: 'Niko',
 };
