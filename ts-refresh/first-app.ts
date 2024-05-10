@@ -93,3 +93,18 @@ function calculate(a: number, b: number, calcFn: AddFn) {
 }
 
 calculate(2, 5, add1);
+
+//////////////////
+// Interfaces
+
+interface Credentials {
+  password: string;
+  email: string;
+}
+
+let creds: Credentials;
+
+creds = {
+  password: 'abs',
+  email: 'test@test.tt',
+};

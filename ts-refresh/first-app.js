@@ -41,3 +41,8 @@ function calculate(a, b, calcFn) {
     calcFn(a, b);
 }
 calculate(2, 5, add1);
+var creds;
+creds = {
+    password: 'abs',
+    email: 'test@test.tt',
+};
