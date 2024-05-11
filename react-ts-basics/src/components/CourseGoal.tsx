@@ -1,17 +1,24 @@
-// type CourseGoalProps = {
-//   title: string;
-//   description: string;
-
-import { type FC, type PropsWithChildren } from 'react';
+import { type PropsWithChildren } from 'react';
+// import { type FC, type PropsWithChildren } from 'react';
 
 // import { type ReactNode } from 'react';
-// interface CourseGoalProps {
-//   title: string;
-//   children: ReactNode;
-// }
 
 type CourseGoalProps = PropsWithChildren<{ title: string }>; // alternative to the one above
 
+export default function CourseGoal({ title, children }: CourseGoalProps) {
+  return (
+    <article>
+      <div>
+        <h2>{title}</h2>
+        {children}
+      </div>
+      <button>Delete</button>
+    </article>
+  );
+}
+
+//////////////////////// alternative to function CourseGoal(){}
+/*
 const CourseGoal: FC<CourseGoalProps> = ({ title, children }) => {
   return (
     <article>
@@ -25,22 +32,21 @@ const CourseGoal: FC<CourseGoalProps> = ({ title, children }) => {
 };
 
 export default CourseGoal;
-
-/*
-export default function CourseGoal({ title, children }: CourseGoalProps) {
-  return (
-    <article>
-      <div>
-        <h2>{title}</h2>
-        {children}
-      </div>
-      <button>Delete</button>
-    </article>
-  );
-}
 */
 
 /*
+/////////////////////////////
+type CourseGoalProps = {
+  title: string;
+  description: string;
+}
+//or
+interface CourseGoalProps {
+  title: string;
+  children: ReactNode;
+}
+//one of the two above
+
 export default function CourseGoal({
   title,
   description,
@@ -59,6 +65,8 @@ export default function CourseGoal({
   );
 }
 */
+
+////////////////////////////////////////
 /*
 export default function CourseGoal(props: {
   title: string;
