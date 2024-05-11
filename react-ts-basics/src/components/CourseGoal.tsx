@@ -2,7 +2,7 @@
 //   title: string;
 //   description: string;
 
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 // };
 interface CourseGoalProps {
