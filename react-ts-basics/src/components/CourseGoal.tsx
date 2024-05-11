@@ -1,7 +1,4 @@
 import { type PropsWithChildren } from 'react';
-// import { type FC, type PropsWithChildren } from 'react';
-
-// import { type ReactNode } from 'react';
 
 type CourseGoalProps = PropsWithChildren<{ title: string }>; // alternative to the one above
 
@@ -19,14 +16,16 @@ export default function CourseGoal({ title, children }: CourseGoalProps) {
 
 //////////////////////// alternative to function CourseGoal(){}
 /*
+// import { type ReactNode } from 'react';
+import { type FC, type PropsWithChildren } from 'react';
 const CourseGoal: FC<CourseGoalProps> = ({ title, children }) => {
   return (
     <article>
-      <div>
-        <h2>{title}</h2>
-        {children}
-      </div>
-      <button>Delete</button>
+    <div>
+    <h2>{title}</h2>
+    {children}
+    </div>
+    <button>Delete</button>
     </article>
   );
 };
