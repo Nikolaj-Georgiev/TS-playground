@@ -5,7 +5,7 @@ import goalsImg from './assets/goals.jpg';
 import Header from './components/Header.tsx';
 import CourseGoalList from './components/CourseGoalListTry.tsx';
 
-type CourseGoals = {
+export type CourseGoals = {
   title: string;
   description: string;
   id: number;

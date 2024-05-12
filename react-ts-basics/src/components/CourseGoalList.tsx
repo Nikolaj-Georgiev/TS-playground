@@ -1,11 +1,8 @@
-import CourseGoal from './CourseGoal';
+import CourseGoal from './CourseGoal.tsx';
+import { CourseGoals } from '../App.tsx';
 
 type CourseGoalListProps = {
-  goals: {
-    title: string;
-    description: string;
-    id: number;
-  }[];
+  goals: CourseGoals[];
 };
 
 export default function CourseGoalList({ goals }: CourseGoalListProps) {
