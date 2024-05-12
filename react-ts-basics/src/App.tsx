@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 // import User from './components/Users.tsx';
-import CourseGoal from './components/CourseGoal.tsx';
 import goalsImg from './assets/goals.jpg';
 import Header from './components/Header.tsx';
+import CourseGoalListTry from './components/CourseGoalListTry.tsx';
 
 type CourseGoals = {
   title: string;
@@ -32,7 +32,10 @@ export default function App() {
         <h1>Your Course Goals</h1>
       </Header>
       <button onClick={handleAddGoal}>Add Goal</button>
-      <ul>
+
+      <CourseGoalListTry goals={goals} />
+
+      {/* <ul>
         {goals.map((goal) => (
           <li key={goal.id}>
             <CourseGoal title={goal.title}>
@@ -40,7 +43,7 @@ export default function App() {
             </CourseGoal>
           </li>
         ))}
-      </ul>
+      </ul> */}
 
       {/* <ul>
         {users.map((user, index) => (
