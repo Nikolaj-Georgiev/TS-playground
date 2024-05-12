@@ -27,7 +27,7 @@ export default function CourseGoalList({
     warningBox = (
       <InfoBox
         mode='warning'
-        // severity='high'
+        severity='high'
       >
         You are collecting a lot of goals! Don't put too much on your plate!
       </InfoBox>

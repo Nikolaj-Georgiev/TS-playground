@@ -1,12 +1,22 @@
 import { ReactNode } from 'react';
 
-type InfoBoxProps = {
-  mode: 'hint' | 'warning';
-  severity?: 'low' | 'medium' | 'high';
+// N.B.!!! Discriminated Union feature!
+type HintInfoBoxProps = {
+  mode: 'hint';
   children: ReactNode;
 };
 
-export default function InfoBox({ mode, severity, children }: InfoBoxProps) {
+type WarningInfoBoxProps = {
+  mode: 'warning';
+  severity: 'low' | 'medium' | 'high';
+  children: ReactNode;
+};
+
+type InfoBoxProps = HintInfoBoxProps | WarningInfoBoxProps;
+
+export default function InfoBox(props: InfoBoxProps) {
+  const { mode, children } = props;
+
   if (mode === 'hint') {
     return (
       <aside className='infobox infobox-hint'>
@@ -14,6 +24,9 @@ export default function InfoBox({ mode, severity, children }: InfoBoxProps) {
       </aside>
     );
   }
+
+  const { severity } = props;
+
   return (
     <aside className={`infobox infobox-warning warning--${severity}`}>
       <h2>Warning</h2>
