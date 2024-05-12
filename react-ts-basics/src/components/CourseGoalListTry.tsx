@@ -13,7 +13,7 @@ type CourseGoalListProps = {
 export default function CourseGoalListTry({ goals }: CourseGoalListProps) {
   return (
     <ul>
-      {goals.map((goal: CourseGoals) => (
+      {goals.map((goal) => (
         <li key={goal.id}>
           <CourseGoal title={goal.title}>
             <p>{goal.description}</p>

@@ -3,7 +3,7 @@ import { useState } from 'react';
 // import User from './components/Users.tsx';
 import goalsImg from './assets/goals.jpg';
 import Header from './components/Header.tsx';
-import CourseGoalListTry from './components/CourseGoalListTry.tsx';
+import CourseGoalList from './components/CourseGoalListTry.tsx';
 
 type CourseGoals = {
   title: string;
@@ -33,7 +33,7 @@ export default function App() {
       </Header>
       <button onClick={handleAddGoal}>Add Goal</button>
 
-      <CourseGoalListTry goals={goals} />
+      <CourseGoalList goals={goals} />
 
       {/* <ul>
         {goals.map((goal) => (
