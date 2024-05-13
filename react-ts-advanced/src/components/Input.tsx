@@ -1,4 +1,11 @@
-interface InputProps {
+import { ComponentPropsWithoutRef } from 'react';
+
+// type InputProps = {
+//   label: string;
+//   id: string;
+// } & ComponentPropsWithoutRef<'input'>;
+
+interface InputProps extends ComponentPropsWithoutRef<'input'> {
   label: string;
   id: string;
 }
