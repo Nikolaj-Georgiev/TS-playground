@@ -10,13 +10,14 @@ interface InputProps extends ComponentPropsWithoutRef<'input'> {
   id: string;
 }
 
-export default function Input({ label, id }: InputProps) {
+export default function Input({ label, id, ...props }: InputProps) {
   return (
     <p>
       <label htmlFor={id}>{label}</label>
       <input
         type='text'
         id={id}
+        {...props}
       />
     </p>
   );
